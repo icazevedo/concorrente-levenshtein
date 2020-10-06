@@ -10,7 +10,7 @@ public class LevenshteinExecutor {
         int con2 = lev(i , j - 1, data) + 1;
         int con3 = lev(i - 1 , j - 1, data);
 
-        if (data.getPalavra1()[i] == data.getPalavra2()[j]) {
+        if (data.getPalavra1()[i-1] != data.getPalavra2()[j-1]) {
            con3++;
         }
 
