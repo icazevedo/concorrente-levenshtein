@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a398a338-f690-4f63-b642-3bb537e111d8" name="Default Changelist" comment="">
+    <list default="true" id="a398a338-f690-4f63-b642-3bb537e111d8" name="Default Changelist" comment="Corrigindo erro de lógica no algorítmo">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/LevenshteinExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/LevenshteinExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,12 +83,35 @@
       <option name="presentableId" value="Default" />
       <updated>1583407200711</updated>
       <workItem from="1583407214188" duration="1059000" />
-      <workItem from="1601948474920" duration="1061000" />
+      <workItem from="1601948474920" duration="1778000" />
     </task>
+    <task id="LOCAL-00001" summary="Corrigindo erro de lógica no algorítmo">
+      <created>1601949974772</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601949974772</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Corrigindo erro de lógica no algorítmo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo erro de lógica no algorítmo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="123" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601948655603">
@@ -81,21 +122,37 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="457" y="282" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1601948652446" />
-    <state width="1398" height="231" key="GridCell.Tab.0.bottom" timestamp="1601949718115">
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom" timestamp="1601949925725">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1601949718115" />
-    <state width="1398" height="231" key="GridCell.Tab.0.center" timestamp="1601949718113">
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1601949925725" />
+    <state width="1398" height="231" key="GridCell.Tab.0.center" timestamp="1601949925724">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1601949718113" />
-    <state width="1398" height="231" key="GridCell.Tab.0.left" timestamp="1601949718113">
+    <state width="1398" height="231" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1601949925724" />
+    <state width="1398" height="231" key="GridCell.Tab.0.left" timestamp="1601949925723">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1601949718113" />
-    <state width="1398" height="231" key="GridCell.Tab.0.right" timestamp="1601949718114">
+    <state width="1398" height="231" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1601949925723" />
+    <state width="1398" height="231" key="GridCell.Tab.0.right" timestamp="1601949925724">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1601949718114" />
+    <state width="1398" height="231" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1601949925724" />
+    <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1601949896401">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1601949896401" />
+    <state width="1398" height="286" key="GridCell.Tab.1.center" timestamp="1601949896400">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1601949896400" />
+    <state width="1398" height="286" key="GridCell.Tab.1.left" timestamp="1601949896399">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1601949896399" />
+    <state width="1398" height="286" key="GridCell.Tab.1.right" timestamp="1601949896400">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1601949896400" />
   </component>
 </project>
