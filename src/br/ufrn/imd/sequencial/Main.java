@@ -1,12 +1,10 @@
-package br.ufrn.imd.concorrente;
+package br.ufrn.imd.sequencial;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Collection;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
@@ -14,34 +12,32 @@ public class Main {
     public static int smallerDistance = Integer.MAX_VALUE;
     public static String smallerDistanceWord = "";
 
-    public static void waitFor(Collection<? extends Thread> c) throws InterruptedException {
-        for(Thread t : c) t.join();
-    }
-
-//    public static Thread readFile(Path path) {
     public static void readFile(Path path) {
-        FileRunner fileRunner = new FileRunner(path);
-//        Thread fileRunnerThread = new Thread(fileRunner);
-//        fileRunnerThread.start();
-        fileRunner.run();
+        try(Scanner sc = new Scanner(path);) {
+
+            while(sc.hasNext()) {
+                String word = sc.next();
+                int distance = LevenshteinExecutor.lev(chosenWord.length(), word.length(), new LevenshteinData(chosenWord, word));
+                System.out.println(new StringBuilder().append(word).append(": ").append(distance));
+
+                if(distance < smallerDistance) {
+                    smallerDistance = distance;
+                    smallerDistanceWord = word;
+                }
+            }
+        } catch (IOException exception) {
+            throw new RuntimeException("Erro ao ler arquivo", exception);
+        }
     }
 
     public static void main(String[] args) throws IOException {
         long startTime = System.nanoTime();
 
         try (Stream<Path> paths = Files.walk(Paths.get("/Users/vtex/faculdade/concorrente/concorrente-levenshtein/dataset"))) {
-//            Stream<Thread> fileThread = paths
-//                    .filter(Files::isRegularFile)
-//                    .limit(10)
-//                    .map(Main::readFile);
-//
-//            waitFor(fileThread.collect(Collectors.toSet()));
             paths
                     .filter(Files::isRegularFile)
-                    .limit(1)
+                    .limit(10)
                     .forEach(Main::readFile);
-        } catch (Exception e) {
-            System.out.println("Sucks, right?");
         }
 
         long endTime = System.nanoTime();

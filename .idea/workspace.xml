@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="bestmatching:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,9 +24,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a398a338-f690-4f63-b642-3bb537e111d8" name="Default Changelist" comment="Corrigindo erro de lógica no algorítmo">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a398a338-f690-4f63-b642-3bb537e111d8" name="Default Changelist" comment="Adicionando git ignore para o dataset">
+      <change afterPath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/FileRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ufrn/imd/sequencial/LevenshteinData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ufrn/imd/sequencial/LevenshteinExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/ufrn/imd/sequencial/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/LevenshteinExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/LevenshteinExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,31 +54,54 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/br/ufrn/imd/concorrente" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/br/ufrn/imd/concorrente" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main concorrente">
+    <configuration name="Main concorrente" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="br.ufrn.imd.concorrente.Main" />
+      <module name="bestmatching" />
+      <option name="VM_PARAMETERS" value="-Xmx4096M" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main sequencial" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="br.ufrn.imd.sequencial.Main" />
       <module name="bestmatching" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main concorrente" />
+      <item itemvalue="Application.Main sequencial" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -83,7 +115,8 @@
       <option name="presentableId" value="Default" />
       <updated>1583407200711</updated>
       <workItem from="1583407214188" duration="1059000" />
-      <workItem from="1601948474920" duration="1778000" />
+      <workItem from="1601948474920" duration="5312000" />
+      <workItem from="1602036794527" duration="9278000" />
     </task>
     <task id="LOCAL-00001" summary="Corrigindo erro de lógica no algorítmo">
       <created>1601949974772</created>
@@ -92,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601949974772</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adicionando git ignore para o dataset">
+      <created>1601952072734</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601952072734</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,51 +148,96 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Corrigindo erro de lógica no algorítmo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo erro de lógica no algorítmo" />
+    <MESSAGE value="Adicionando git ignore para o dataset" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando git ignore para o dataset" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="123" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601948655603">
+    <state x="558" y="323" key="#Customize_Threads_View" timestamp="1602040327881">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="184" y="123" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1601948655603" />
-    <state x="457" y="282" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601948652446">
+    <state x="558" y="323" key="#Customize_Threads_View/0.23.1440.877@0.23.1440.877" timestamp="1602040327881" />
+    <state x="184" y="123" width="1071" height="748" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602084849127">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="457" y="282" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1601948652446" />
-    <state width="1398" height="231" key="GridCell.Tab.0.bottom" timestamp="1601949925725">
+    <state x="184" y="123" width="1071" height="748" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1602084849127" />
+    <state x="507" y="209" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1602042288442">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1601949925725" />
-    <state width="1398" height="231" key="GridCell.Tab.0.center" timestamp="1601949925724">
+    <state x="507" y="209" key="#com.intellij.ide.macro.MacrosDialog/0.23.1440.877@0.23.1440.877" timestamp="1602042288442" />
+    <state x="533" y="175" key="#com.intellij.ide.util.MemberChooser" timestamp="1602040508166">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1601949925724" />
-    <state width="1398" height="231" key="GridCell.Tab.0.left" timestamp="1601949925723">
+    <state x="533" y="175" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1602040508166" />
+    <state x="457" y="282" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1602042606144">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1601949925723" />
-    <state width="1398" height="231" key="GridCell.Tab.0.right" timestamp="1601949925724">
+    <state x="457" y="282" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1602042606144" />
+    <state x="273" y="223" key="#org.jetbrains.debugger.memory.view.InstancesWindow" timestamp="1602086119460">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1601949925724" />
-    <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1601949896401">
+    <state x="273" y="223" key="#org.jetbrains.debugger.memory.view.InstancesWindow/0.23.1440.877@0.23.1440.877" timestamp="1602086119460" />
+    <state width="1398" height="286" key="GridCell.Tab.0.bottom" timestamp="1602086142811">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1601949896401" />
-    <state width="1398" height="286" key="GridCell.Tab.1.center" timestamp="1601949896400">
+    <state width="1398" height="286" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1602086142811" />
+    <state width="1398" height="286" key="GridCell.Tab.0.center" timestamp="1602086142809">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1601949896400" />
-    <state width="1398" height="286" key="GridCell.Tab.1.left" timestamp="1601949896399">
+    <state width="1398" height="286" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1602086142809" />
+    <state width="1398" height="286" key="GridCell.Tab.0.left" timestamp="1602086142808">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1601949896399" />
-    <state width="1398" height="286" key="GridCell.Tab.1.right" timestamp="1601949896400">
+    <state width="1398" height="286" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1602086142808" />
+    <state width="1398" height="286" key="GridCell.Tab.0.right" timestamp="1602086142810">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1601949896400" />
+    <state width="1398" height="286" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1602086142810" />
+    <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1602086141896">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1602086141896" />
+    <state width="1398" height="286" key="GridCell.Tab.1.center" timestamp="1602086141896">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1602086141896" />
+    <state width="1398" height="286" key="GridCell.Tab.1.left" timestamp="1602086141895">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1602086141895" />
+    <state width="1398" height="286" key="GridCell.Tab.1.right" timestamp="1602086141896">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1602086141896" />
+    <state x="208" y="43" key="SettingsEditor" timestamp="1602082467136">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="208" y="43" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1602082467136" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1602036802541">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1602036802541" />
+    <state width="720" height="438" key="XDebugger.FullValuePopup" timestamp="1601953128019">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="720" height="438" key="XDebugger.FullValuePopup/0.23.1440.877@0.23.1440.877" timestamp="1601953128019" />
+    <state x="418" y="216" width="604" height="490" key="find.popup" timestamp="1602042075389">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="418" y="216" width="604" height="490" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1602042075389" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/br/ufrn/imd/concorrente/FileRunner.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
