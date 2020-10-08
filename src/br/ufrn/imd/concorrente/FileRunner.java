@@ -16,27 +16,13 @@ public class FileRunner implements Runnable {
         try (Scanner sc = new Scanner(filePath)) {
             while (sc.hasNext()) {
                 String word = sc.next();
-                System.out.println("Checking word: " + word);
-                LevenshteinExecutor levenshteinExecutor = new LevenshteinExecutor(Main.chosenWord.length(), word.length(), new LevenshteinData(Main.chosenWord, word));
-                levenshteinExecutor.run();
-                int distance = levenshteinExecutor.value;
-
-                if(distance == -1) {
-                    System.out.println("Bad small for word: " + word);
-                    continue;
-                }
-
-                if (distance < Main.smallerDistance) {
-                    System.out.println("Found new better word: " + word + " with distance " + distance);
-                    Main.smallerDistance = distance;
-                    Main.smallerDistanceWord = word;
-                }
+//                System.out.println("Checking word: " + word);
+                WordRunner wordRunner = new WordRunner(word);
+                Thread wordThread = new Thread(wordRunner);
+                wordThread.start();
             }
         } catch (IOException exception) {
             throw new RuntimeException("Erro ao ler arquivo", exception);
         }
-//        catch(InterruptedException exception) {
-//            throw new RuntimeException("Erro na thread do levenshtein", exception);
-//        }
     }
 }

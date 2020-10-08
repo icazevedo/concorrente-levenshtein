@@ -24,14 +24,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a398a338-f690-4f63-b642-3bb537e111d8" name="Default Changelist" comment="Adicionando git ignore para o dataset">
-      <change afterPath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/FileRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/ufrn/imd/sequencial/LevenshteinData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/ufrn/imd/sequencial/LevenshteinExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/ufrn/imd/sequencial/Main.java" afterDir="false" />
+    <list default="true" id="a398a338-f690-4f63-b642-3bb537e111d8" name="Default Changelist" comment="[WIP] Implementando versão concorrente">
+      <change afterPath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/WordRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/FileRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/FileRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/LevenshteinExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/LevenshteinExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/sequencial/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrn/imd/sequencial/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,15 +84,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,7 +113,8 @@
       <updated>1583407200711</updated>
       <workItem from="1583407214188" duration="1059000" />
       <workItem from="1601948474920" duration="5312000" />
-      <workItem from="1602036794527" duration="9278000" />
+      <workItem from="1602036794527" duration="9708000" />
+      <workItem from="1602114741713" duration="6556000" />
     </task>
     <task id="LOCAL-00001" summary="Corrigindo erro de lógica no algorítmo">
       <created>1601949974772</created>
@@ -132,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601952072734</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[WIP] Implementando versão concorrente">
+      <created>1602086207868</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602086207868</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,25 +158,26 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Corrigindo erro de lógica no algorítmo" />
     <MESSAGE value="Adicionando git ignore para o dataset" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando git ignore para o dataset" />
+    <MESSAGE value="[WIP] Implementando versão concorrente" />
+    <option name="LAST_COMMIT_MESSAGE" value="[WIP] Implementando versão concorrente" />
   </component>
   <component name="WindowStateProjectService">
     <state x="558" y="323" key="#Customize_Threads_View" timestamp="1602040327881">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="558" y="323" key="#Customize_Threads_View/0.23.1440.877@0.23.1440.877" timestamp="1602040327881" />
-    <state x="184" y="123" width="1071" height="748" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602084849127">
+    <state x="184" y="123" width="1071" height="748" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602119875811">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="184" y="123" width="1071" height="748" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1602084849127" />
+    <state x="184" y="123" width="1071" height="748" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1602119875811" />
     <state x="507" y="209" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1602042288442">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="507" y="209" key="#com.intellij.ide.macro.MacrosDialog/0.23.1440.877@0.23.1440.877" timestamp="1602042288442" />
-    <state x="533" y="175" key="#com.intellij.ide.util.MemberChooser" timestamp="1602040508166">
+    <state x="533" y="175" key="#com.intellij.ide.util.MemberChooser" timestamp="1602115143903">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="533" y="175" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1602040508166" />
+    <state x="533" y="175" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1602115143903" />
     <state x="457" y="282" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1602042606144">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -180,64 +186,57 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="273" y="223" key="#org.jetbrains.debugger.memory.view.InstancesWindow/0.23.1440.877@0.23.1440.877" timestamp="1602086119460" />
-    <state width="1398" height="286" key="GridCell.Tab.0.bottom" timestamp="1602086142811">
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom" timestamp="1602121263561">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1602086142811" />
-    <state width="1398" height="286" key="GridCell.Tab.0.center" timestamp="1602086142809">
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1602121263561" />
+    <state width="1398" height="231" key="GridCell.Tab.0.center" timestamp="1602121263502">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1602086142809" />
-    <state width="1398" height="286" key="GridCell.Tab.0.left" timestamp="1602086142808">
+    <state width="1398" height="231" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1602121263502" />
+    <state width="1398" height="231" key="GridCell.Tab.0.left" timestamp="1602121263502">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1602086142808" />
-    <state width="1398" height="286" key="GridCell.Tab.0.right" timestamp="1602086142810">
+    <state width="1398" height="231" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1602121263502" />
+    <state width="1398" height="231" key="GridCell.Tab.0.right" timestamp="1602121263503">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1602086142810" />
-    <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1602086141896">
+    <state width="1398" height="231" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1602121263503" />
+    <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1602086643517">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1602086141896" />
-    <state width="1398" height="286" key="GridCell.Tab.1.center" timestamp="1602086141896">
+    <state width="1398" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1602086643517" />
+    <state width="1398" height="286" key="GridCell.Tab.1.center" timestamp="1602086643516">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1602086141896" />
-    <state width="1398" height="286" key="GridCell.Tab.1.left" timestamp="1602086141895">
+    <state width="1398" height="286" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1602086643516" />
+    <state width="1398" height="286" key="GridCell.Tab.1.left" timestamp="1602086643515">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1602086141895" />
-    <state width="1398" height="286" key="GridCell.Tab.1.right" timestamp="1602086141896">
+    <state width="1398" height="286" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1602086643515" />
+    <state width="1398" height="286" key="GridCell.Tab.1.right" timestamp="1602086643516">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1602086141896" />
-    <state x="208" y="43" key="SettingsEditor" timestamp="1602082467136">
+    <state width="1398" height="286" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1602086643516" />
+    <state x="208" y="43" key="SettingsEditor" timestamp="1602117093387">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="208" y="43" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1602082467136" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1602036802541">
+    <state x="208" y="43" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1602117093387" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1602086210353">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1602036802541" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1602086210353" />
     <state width="720" height="438" key="XDebugger.FullValuePopup" timestamp="1601953128019">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="720" height="438" key="XDebugger.FullValuePopup/0.23.1440.877@0.23.1440.877" timestamp="1601953128019" />
-    <state x="418" y="216" width="604" height="490" key="find.popup" timestamp="1602042075389">
+    <state x="418" y="216" width="604" height="490" key="find.popup" timestamp="1602117980626">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="418" y="216" width="604" height="490" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1602042075389" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/br/ufrn/imd/concorrente/FileRunner.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="418" y="216" width="604" height="490" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1602117980626" />
+    <state x="385" y="211" key="run.anything.popup" timestamp="1602115611348">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="211" key="run.anything.popup/0.23.1440.877@0.23.1440.877" timestamp="1602115611348" />
   </component>
 </project>

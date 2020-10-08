@@ -1,62 +1,43 @@
 package br.ufrn.imd.concorrente;
 
-public class LevenshteinExecutor implements Runnable {
-    private final Integer i;
-    private final Integer j;
-    private final LevenshteinData data;
+public class LevenshteinExecutor {
+    private final char[] word1;
+    private final char[] word2;
 
-    public int value;
-
-    public LevenshteinExecutor(Integer i, Integer j, LevenshteinData data) {
-        this.i = i;
-        this.j = j;
-        this.data = data;
+    public LevenshteinExecutor(String word1, String word2) {
+        this.word1 = word1.toCharArray();
+        this.word2 = word2.toCharArray();
     }
 
-    @Override
-    public void run() {
-        if (Math.min(i, j) == 0) {
-            value = Math.max(i, j);
-            return;
+    public int run() {
+        int[][] distance = new int[word1.length+1][word2.length+1];
+
+        for (int x = 1; x <= word1.length; x++) {
+            distance[x][0] = x;
         }
 
-        LevenshteinExecutor executorCond1 = new LevenshteinExecutor(i - 1, j, data);
-        LevenshteinExecutor executorCond2 = new LevenshteinExecutor(i, j - 1, data);
-        LevenshteinExecutor executorCond3 = new LevenshteinExecutor(i - 1, j - 1, data);
-
-        Thread threadCond1 = new Thread(executorCond1);
-        Thread threadCond2 = new Thread(executorCond2);
-        Thread threadCond3 = new Thread(executorCond3);
-
-
-        try {
-        threadCond1.start();
-        threadCond2.start();
-            threadCond1.join();
-            threadCond2.join();
-        threadCond3.start();
-            threadCond3.join();
-        } catch (InterruptedException e) {
-            value = -1;
-            return;
+        for (int y = 1; y <= word2.length; y++) {
+            distance[0][y] = y;
         }
 
-        int cond1 = executorCond1.value;
-        int cond2 = executorCond2.value;
-        int cond3 = executorCond3.value;
+        for (int x = 1; x <= word1.length; ++x) {
+            for (int y = 1; y <= word2.length; ++y) {
+                int substitutionCost = 0;
 
-        if (cond1 == -1 || cond2 == -1 || cond3 == -1) {
-           value = -1;
-           return;
+                if (word1[x-1] != word2[y-1]) {
+                    substitutionCost = 1;
+                }
+
+                distance[x][y] = Math.min(
+                        distance[x - 1][y] + 1,
+                        Math.min(
+                                distance[x][y - 1] + 1,
+                                distance[x - 1][y - 1] + substitutionCost
+                        )
+                );
+            }
         }
 
-        cond1++;
-        cond2++;
-
-        if (data.getPalavra1()[i - 1] != data.getPalavra2()[j - 1]) {
-            cond3++;
-        }
-
-        value = Math.min(cond1, Math.min(cond2, cond3));
+        return distance[word1.length][word2.length];
     }
 }
