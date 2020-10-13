@@ -22,10 +22,10 @@ public class Main {
                 String word = sc.next();
                 int distance = new LevenshteinExecutor(chosenWord, word).run();
 
-                int smallerDistanceRead = br.ufrn.imd.concorrente.Main.smallerDistance.get();
+                int smallerDistanceRead = smallerDistance.get();
                 if (distance < smallerDistanceRead) {
-                    br.ufrn.imd.concorrente.Main.smallerDistance.compareAndSet(smallerDistanceRead, distance);
-                    br.ufrn.imd.concorrente.Main.smallerDistanceWord = word;
+                    smallerDistance.compareAndSet(smallerDistanceRead, distance);
+                    smallerDistanceWord = word;
                     System.out.println("Found new better word: " + word + " with distance " + distance);
                 }
             }
@@ -34,13 +34,15 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         long startTime = System.nanoTime();
 
-        try (Stream<Path> paths = Files.walk(Paths.get("/Users/vtex/faculdade/concorrente/concorrente-levenshtein/dataset"))) {
+        try (Stream<Path> paths = Files.walk(Paths.get(args[0]))) {
             paths
                     .filter(Files::isRegularFile)
                     .forEach(Main::readFile);
+        } catch (IOException e) {
+            throw new RuntimeException("Too bad, has been an error!", e);
         }
 
         long endTime = System.nanoTime();

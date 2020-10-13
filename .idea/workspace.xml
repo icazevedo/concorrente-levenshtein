@@ -24,9 +24,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a398a338-f690-4f63-b642-3bb537e111d8" name="Default Changelist" comment="Versão concorrente concluída">
+    <list default="true" id="a398a338-f690-4f63-b642-3bb537e111d8" name="Default Changelist" comment="Algoritmo final sem testes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/FileRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/FileRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/sequencial/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrn/imd/sequencial/Main.java" afterDir="false" />
     </list>
@@ -122,7 +121,7 @@
       <workItem from="1602114741713" duration="9158000" />
       <workItem from="1602157928825" duration="2688000" />
       <workItem from="1602366852994" duration="8000" />
-      <workItem from="1602542971630" duration="4319000" />
+      <workItem from="1602542971630" duration="5630000" />
     </task>
     <task id="LOCAL-00001" summary="Corrigindo erro de lógica no algorítmo">
       <created>1601949974772</created>
@@ -152,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602121658747</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Algoritmo final sem testes">
+      <created>1602550562739</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602550562739</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +181,8 @@
     <MESSAGE value="Adicionando git ignore para o dataset" />
     <MESSAGE value="[WIP] Implementando versão concorrente" />
     <MESSAGE value="Versão concorrente concluída" />
-    <option name="LAST_COMMIT_MESSAGE" value="Versão concorrente concluída" />
+    <MESSAGE value="Algoritmo final sem testes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Algoritmo final sem testes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="558" y="323" key="#Customize_Threads_View" timestamp="1602040327881">
@@ -242,10 +249,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="208" y="43" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1602546119548" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1602121666604">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1602550566310">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1602121666603" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1602550566310" />
     <state width="720" height="438" key="XDebugger.FullValuePopup" timestamp="1601953128019">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

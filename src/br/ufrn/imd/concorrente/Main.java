@@ -31,7 +31,7 @@ public class Main {
         System.out.println(Runtime.getRuntime().availableProcessors() + " cores available");
         ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
-        try (Stream<Path> paths = Files.walk(Paths.get("/Users/vtex/faculdade/concorrente/concorrente-levenshtein/dataset"))) {
+        try (Stream<Path> paths = Files.walk(Paths.get(args[0]))) {
             Stream<Future<?>> fileThread = paths
                     .filter(Files::isRegularFile)
                     .map((path) -> readFile(path, executor));
@@ -39,7 +39,7 @@ public class Main {
             waitFor(fileThread.collect(Collectors.toSet()));
             executor.shutdownNow();
         } catch (IOException | InterruptedException | ExecutionException e) {
-            System.out.println("Sucks, right?");
+            throw new RuntimeException("Too bad, has been an error!", e);
         }
 
         long endTime = System.nanoTime();
