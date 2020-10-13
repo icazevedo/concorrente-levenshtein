@@ -1,14 +1,16 @@
-package br.ufrn.imd.concorrente;
+package br.ufrn.imd;
 
 public class LevenshteinExecutor {
     private final char[] word1;
     private final char[] word2;
 
     public LevenshteinExecutor(String word1, String word2) {
+        //Transforma as strings em array de chars para facilitar as operações do algorítmo
         this.word1 = word1.toCharArray();
         this.word2 = word2.toCharArray();
     }
 
+    //Implementação iterativa do algoritmo de levenshtein
     public int run() {
         int[][] distance = new int[word1.length+1][word2.length+1];
 

@@ -15,10 +15,12 @@ public class FileRunner implements Runnable {
     public void run() {
         try (Scanner sc = new Scanner(filePath)) {
             while (sc.hasNext()) {
-                String word = sc.next();
-
-                WordRunner wordRunner = new WordRunner(word);
-                wordRunner.run();
+                // Recebe próxima palavra ao invocar sc.next()
+                // Rodar run() faz com que o código do runner seja executado
+                //
+                // Está como runnable só pra facilitar o entendimento, e por que antes eu estava
+                // prototipando com threads nesse setor.
+                new WordRunner(sc.next()).run();
             }
         } catch (IOException exception) {
             throw new RuntimeException("Erro ao ler arquivo", exception);
