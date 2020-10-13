@@ -5,11 +5,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
+import br.ufrn.imd.concorrente.LevenshteinExecutor;
+
 public class Main {
-    public static String chosenWord = "catnip";
-    public static int smallerDistance = Integer.MAX_VALUE;
+    public static String chosenWord = "officially";
+    public static AtomicInteger smallerDistance = new AtomicInteger(Integer.MAX_VALUE);
     public static String smallerDistanceWord = "";
 
     public static void readFile(Path path) {
@@ -17,12 +20,13 @@ public class Main {
 
             while(sc.hasNext()) {
                 String word = sc.next();
-                int distance = LevenshteinExecutor.lev(chosenWord.length(), word.length(), new LevenshteinData(chosenWord, word));
-                System.out.println(new StringBuilder().append(word).append(": ").append(distance));
+                int distance = new LevenshteinExecutor(chosenWord, word).run();
 
-                if(distance < smallerDistance) {
-                    smallerDistance = distance;
-                    smallerDistanceWord = word;
+                int smallerDistanceRead = br.ufrn.imd.concorrente.Main.smallerDistance.get();
+                if (distance < smallerDistanceRead) {
+                    br.ufrn.imd.concorrente.Main.smallerDistance.compareAndSet(smallerDistanceRead, distance);
+                    br.ufrn.imd.concorrente.Main.smallerDistanceWord = word;
+                    System.out.println("Found new better word: " + word + " with distance " + distance);
                 }
             }
         } catch (IOException exception) {
@@ -36,13 +40,12 @@ public class Main {
         try (Stream<Path> paths = Files.walk(Paths.get("/Users/vtex/faculdade/concorrente/concorrente-levenshtein/dataset"))) {
             paths
                     .filter(Files::isRegularFile)
-                    .limit(10)
                     .forEach(Main::readFile);
         }
 
         long endTime = System.nanoTime();
-        long duration = (endTime - startTime);
-        System.out.println(duration);
+        long duration = (endTime - startTime) / 1000000000;
+        System.out.println(duration + " seconds");
 
         System.out.println("Menor distância: " + smallerDistance + "\nPalavra de menor distância: " + smallerDistanceWord);
     }

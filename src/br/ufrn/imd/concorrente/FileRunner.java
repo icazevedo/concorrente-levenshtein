@@ -16,10 +16,9 @@ public class FileRunner implements Runnable {
         try (Scanner sc = new Scanner(filePath)) {
             while (sc.hasNext()) {
                 String word = sc.next();
-//                System.out.println("Checking word: " + word);
+
                 WordRunner wordRunner = new WordRunner(word);
-                Thread wordThread = new Thread(wordRunner);
-                wordThread.start();
+                wordRunner.run();
             }
         } catch (IOException exception) {
             throw new RuntimeException("Erro ao ler arquivo", exception);

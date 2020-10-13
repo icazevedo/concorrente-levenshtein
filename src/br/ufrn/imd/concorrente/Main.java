@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collection;
 import java.util.Scanner;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -15,28 +16,29 @@ public class Main {
     public static AtomicInteger smallerDistance = new AtomicInteger(Integer.MAX_VALUE);
     public static String smallerDistanceWord = "";
 
-    public static void waitFor(Collection<? extends Thread> c) throws InterruptedException {
-        for(Thread t : c) t.join();
+    public static void waitFor(Collection<Future<?>> c) throws InterruptedException, ExecutionException {
+        for(Future<?> f : c) f.get();
     }
 
-    public static Thread readFile(Path path) {
+    public static Future<?> readFile(Path path, ThreadPoolExecutor executor) {
         FileRunner fileRunner = new FileRunner(path);
-        Thread fileRunnerThread = new Thread(fileRunner);
-        fileRunnerThread.start();
-        return fileRunnerThread;
+        return executor.submit(fileRunner);
     }
 
     public static void main(String[] args) {
         long startTime = System.nanoTime();
 
+        System.out.println(Runtime.getRuntime().availableProcessors() + " cores available");
+        ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+
         try (Stream<Path> paths = Files.walk(Paths.get("/Users/vtex/faculdade/concorrente/concorrente-levenshtein/dataset"))) {
-            Stream<Thread> fileThread = paths
+            Stream<Future<?>> fileThread = paths
                     .filter(Files::isRegularFile)
-                    .limit(150)
-                    .map(Main::readFile);
+                    .map((path) -> readFile(path, executor));
 
             waitFor(fileThread.collect(Collectors.toSet()));
-        } catch (IOException | InterruptedException e) {
+            executor.shutdownNow();
+        } catch (IOException | InterruptedException | ExecutionException e) {
             System.out.println("Sucks, right?");
         }
 
