@@ -25,10 +25,10 @@ public class BenchTest {
     @BenchmarkMode(Mode.All)
     @Warmup(iterations = 3)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
-    public void levenshteinCalculationBenchmark() {
+    public void levenshteinCalculationBenchmark(Blackhole blackhole) {
         String foo = "testedebenchmark";
         String boo = "benchmarktest";
 
-        new LevenshteinExecutor(foo, boo).run();
+        blackhole.consume(new LevenshteinExecutor(foo, boo).run());
     }
 }
