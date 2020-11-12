@@ -27,24 +27,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a398a338-f690-4f63-b642-3bb537e111d8" name="Default Changelist" comment="Exceção relançada e código mais igual entre versões">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/tests/JCStress/StressTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/tests/JCStress/StressTestResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/tests/JMH/BenchTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/tests/JMH/MainJMH.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a398a338-f690-4f63-b642-3bb537e111d8" name="Default Changelist" comment="Melhoria do JMH usando blackhole">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/callable/CallableLevenshteinExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/callable/FileRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/callable/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/callable/WordRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/forkjoin/ForkjoinLevenshteinExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/forkjoin/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/parallelstream/FileRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/parallelstream/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/parallelstream/ParallelLevenshteinExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/parallelstream/WordRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bestmatching.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bestmatching.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/FileRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/concorrente/FileRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/LevenshteinData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/LevenshteinExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/LevenshteinExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/concorrente/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/concorrente/WordRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/concorrente/WordRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/sequencial/LevenshteinData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/sequencial/LevenshteinExecutor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ufrn/imd/sequencial/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/sequencial/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/tests/JMH/BenchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/tests/JMH/BenchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,29 +75,64 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/br/ufrn/imd/concorrente" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/br/ufrn/imd/parallelstream" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="br.ufrn.imd" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.ufrn.imd.forkjoin" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/br/ufrn/imd/parallelstream" />
+      <recent name="$PROJECT_DIR$/src/main/java/br/ufrn/imd/tests/JMHCallable" />
+      <recent name="$PROJECT_DIR$/src/main/java/br/ufrn/imd/callable" />
+      <recent name="$PROJECT_DIR$/src/main/java/br/ufrn/imd" />
       <recent name="$PROJECT_DIR$/src/br/ufrn/imd/concorrente" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.bestmatching">
+  <component name="RunManager" selected="Application.Main Fork Join">
     <configuration name="JMH" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="br.ufrn.imd.tests.JMH.MainJMH" />
       <module name="bestmatching" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main Callable" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="br.ufrn.imd.callable.Main" />
+      <module name="bestmatching" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;officially&quot; &quot;$PROJECT_DIR$/dataset&quot;" />
+      <option name="VM_PARAMETERS" value="-Xmx4096M" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main Fork Join" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="br.ufrn.imd.forkjoin.Main" />
+      <module name="bestmatching" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;officially&quot; &quot;$PROJECT_DIR$/dataset&quot;" />
+      <option name="VM_PARAMETERS" value="-Xmx4096M" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main Parallel Stream" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="br.ufrn.imd.parallelstream.Main" />
+      <module name="bestmatching" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;officially&quot; &quot;$PROJECT_DIR$/dataset&quot;" />
+      <option name="VM_PARAMETERS" value="-Xmx4096M" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,17 +150,20 @@
       <option name="MAIN_CLASS_NAME" value="br.ufrn.imd.sequencial.Main" />
       <module name="bestmatching" />
       <option name="PROGRAM_PARAMETERS" value="&quot;officially&quot; &quot;$PROJECT_DIR$/dataset&quot;" />
+      <option name="VM_PARAMETERS" value="-Xmx4096M" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,6 +195,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.Main Parallel Stream" />
+      <item itemvalue="Application.Main Fork Join" />
+      <item itemvalue="Application.Main Callable" />
       <item itemvalue="Application.Main concorrente" />
       <item itemvalue="Application.JMH" />
       <item itemvalue="Application.Main sequencial" />
@@ -187,7 +223,8 @@
       <workItem from="1602366852994" duration="8000" />
       <workItem from="1602542971630" duration="6019000" />
       <workItem from="1602588379232" duration="7739000" />
-      <workItem from="1602623069203" duration="5195000" />
+      <workItem from="1602623069203" duration="7151000" />
+      <workItem from="1605134632926" duration="11168000" />
     </task>
     <task id="LOCAL-00001" summary="Corrigindo erro de lógica no algorítmo">
       <created>1601949974772</created>
@@ -231,7 +268,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602554826447</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Limpeza de código, comentários, otimizações">
+      <created>1602633362752</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602633362752</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Melhoria do JMH usando blackhole">
+      <created>1602640512708</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1602640512708</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,21 +307,27 @@
     <MESSAGE value="Versão concorrente concluída" />
     <MESSAGE value="Algoritmo final sem testes" />
     <MESSAGE value="Exceção relançada e código mais igual entre versões" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exceção relançada e código mais igual entre versões" />
+    <MESSAGE value="Limpeza de código, comentários, otimizações" />
+    <MESSAGE value="Melhoria do JMH usando blackhole" />
+    <option name="LAST_COMMIT_MESSAGE" value="Melhoria do JMH usando blackhole" />
   </component>
   <component name="WindowStateProjectService">
     <state x="558" y="323" key="#Customize_Threads_View" timestamp="1602040327881">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="558" y="323" key="#Customize_Threads_View/0.23.1440.877@0.23.1440.877" timestamp="1602040327881" />
-    <state x="208" y="43" key="#Project_Structure" timestamp="1602589067215">
+    <state x="531" y="189" key="#Menus_and_Toolbars" timestamp="1605136709277">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="208" y="43" key="#Project_Structure/0.23.1440.877@0.23.1440.877" timestamp="1602589067215" />
-    <state x="184" y="123" width="1071" height="772" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602623470259">
+    <state x="531" y="189" key="#Menus_and_Toolbars/0.23.1440.877@0.23.1440.877" timestamp="1605136709277" />
+    <state x="208" y="43" key="#Project_Structure" timestamp="1605137941984">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="184" y="123" width="1071" height="772" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1602623470259" />
+    <state x="208" y="43" key="#Project_Structure/0.23.1440.877@0.23.1440.877" timestamp="1605137941984" />
+    <state x="184" y="32" width="1071" height="868" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605145511973">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="184" y="32" width="1071" height="868" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1605145511973" />
     <state x="507" y="209" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1602589374114">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -279,10 +336,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="533" y="175" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1602601938910" />
-    <state x="457" y="282" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1602589012288">
+    <state x="457" y="282" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1605145485837">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="457" y="282" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1602589012288" />
+    <state x="457" y="282" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1605145485837" />
     <state x="334" y="157" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1602588756965">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -299,22 +356,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="273" y="223" key="#org.jetbrains.debugger.memory.view.InstancesWindow/0.23.1440.877@0.23.1440.877" timestamp="1602086119460" />
-    <state width="1398" height="231" key="GridCell.Tab.0.bottom" timestamp="1602629368887">
+    <state width="1398" height="221" key="GridCell.Tab.0.bottom" timestamp="1605146643511">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1602629368887" />
-    <state width="1398" height="231" key="GridCell.Tab.0.center" timestamp="1602629368886">
+    <state width="1398" height="221" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1605146643511" />
+    <state width="1398" height="221" key="GridCell.Tab.0.center" timestamp="1605146643507">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1602629368886" />
-    <state width="1398" height="231" key="GridCell.Tab.0.left" timestamp="1602629368886">
+    <state width="1398" height="221" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1605146643507" />
+    <state width="1398" height="221" key="GridCell.Tab.0.left" timestamp="1605146643507">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1602629368886" />
-    <state width="1398" height="231" key="GridCell.Tab.0.right" timestamp="1602629368886">
+    <state width="1398" height="221" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1605146643507" />
+    <state width="1398" height="221" key="GridCell.Tab.0.right" timestamp="1605146643511">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="231" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1602629368886" />
+    <state width="1398" height="221" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1605146643511" />
     <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1602125663285">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -331,14 +388,18 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="286" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1602125663285" />
-    <state x="208" y="42" key="SettingsEditor" timestamp="1602589642477">
+    <state x="430" y="171" key="RollbackChangesDialog" timestamp="1605140311877">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="208" y="42" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1602589642477" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1602554829579">
+    <state x="430" y="171" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1605140311877" />
+    <state x="5" y="23" key="SettingsEditor" timestamp="1605140379782">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1602554829579" />
+    <state x="5" y="23" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1605140379782" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1602640514225">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1602640514225" />
     <state width="720" height="438" key="XDebugger.FullValuePopup" timestamp="1601953128019">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -347,10 +408,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="507" y="337" key="classpath-attribute-editor/0.23.1440.877@0.23.1440.877" timestamp="1602546099745" />
-    <state x="418" y="216" width="604" height="490" key="find.popup" timestamp="1602117980626">
+    <state x="418" y="216" width="604" height="490" key="find.popup" timestamp="1605135631076">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="418" y="216" width="604" height="490" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1602117980626" />
+    <state x="418" y="216" width="604" height="490" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1605135631076" />
     <state x="385" y="211" key="run.anything.popup" timestamp="1602115611348">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
