@@ -27,18 +27,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a398a338-f690-4f63-b642-3bb537e111d8" name="Default Changelist" comment="Melhoria do JMH usando blackhole">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/callable/CallableLevenshteinExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/callable/FileRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/callable/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/callable/WordRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/forkjoin/ForkjoinLevenshteinExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/forkjoin/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/parallelstream/FileRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/parallelstream/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/parallelstream/ParallelLevenshteinExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/parallelstream/WordRunner.java" afterDir="false" />
+    <list default="true" id="a398a338-f690-4f63-b642-3bb537e111d8" name="Default Changelist" comment="Implementação com callables, parallel streams and forkjoins">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/concorrentespark/FileRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/concorrentespark/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/concorrentespark/WordRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bestmatching.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bestmatching.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/tests/JMH/BenchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/tests/JMH/BenchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,8 +75,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/br/ufrn/imd/parallelstream" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/br/ufrn/imd/concorrentespark" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -95,14 +90,14 @@
       <recent name="br.ufrn.imd.forkjoin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/br/ufrn/imd/concorrentespark" />
+      <recent name="$PROJECT_DIR$/src/main/java/br/ufrn/imd" />
       <recent name="$PROJECT_DIR$/src/main/java/br/ufrn/imd/parallelstream" />
       <recent name="$PROJECT_DIR$/src/main/java/br/ufrn/imd/tests/JMHCallable" />
       <recent name="$PROJECT_DIR$/src/main/java/br/ufrn/imd/callable" />
-      <recent name="$PROJECT_DIR$/src/main/java/br/ufrn/imd" />
-      <recent name="$PROJECT_DIR$/src/br/ufrn/imd/concorrente" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main Fork Join">
+  <component name="RunManager" selected="Maven.bestmatching">
     <configuration name="JMH" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="br.ufrn.imd.tests.JMH.MainJMH" />
       <module name="bestmatching" />
@@ -137,6 +132,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main concorrente spark" type="Application" factoryName="Application">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="br.ufrn.imd.concorrentespark.Main" />
+      <module name="bestmatching" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;officially&quot; &quot;hdfs://localhost:9000/icaro/dataset/&quot; 3035" />
+      <option name="VM_PARAMETERS" value="-Xmx4096M" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main concorrente" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="br.ufrn.imd.concorrente.Main" />
       <module name="bestmatching" />
@@ -151,19 +156,6 @@
       <module name="bestmatching" />
       <option name="PROGRAM_PARAMETERS" value="&quot;officially&quot; &quot;$PROJECT_DIR$/dataset&quot;" />
       <option name="VM_PARAMETERS" value="-Xmx4096M" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -199,6 +191,7 @@
       <item itemvalue="Application.Main Fork Join" />
       <item itemvalue="Application.Main Callable" />
       <item itemvalue="Application.Main concorrente" />
+      <item itemvalue="Application.Main concorrente spark" />
       <item itemvalue="Application.JMH" />
       <item itemvalue="Application.Main sequencial" />
       <item itemvalue="Maven.bestmatching" />
@@ -224,7 +217,11 @@
       <workItem from="1602542971630" duration="6019000" />
       <workItem from="1602588379232" duration="7739000" />
       <workItem from="1602623069203" duration="7151000" />
-      <workItem from="1605134632926" duration="11168000" />
+      <workItem from="1605134632926" duration="14483000" />
+      <workItem from="1605568387338" duration="201000" />
+      <workItem from="1607296230455" duration="5756000" />
+      <workItem from="1607340408436" duration="2687000" />
+      <workItem from="1607366152717" duration="351000" />
     </task>
     <task id="LOCAL-00001" summary="Corrigindo erro de lógica no algorítmo">
       <created>1601949974772</created>
@@ -282,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602640512708</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implementação com callables, parallel streams and forkjoins">
+      <created>1605146739717</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1605146739717</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,9 +313,14 @@
     <MESSAGE value="Exceção relançada e código mais igual entre versões" />
     <MESSAGE value="Limpeza de código, comentários, otimizações" />
     <MESSAGE value="Melhoria do JMH usando blackhole" />
-    <option name="LAST_COMMIT_MESSAGE" value="Melhoria do JMH usando blackhole" />
+    <MESSAGE value="Implementação com callables, parallel streams and forkjoins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementação com callables, parallel streams and forkjoins" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="487" y="23" key="#Auto_Import" timestamp="1607342630125">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="487" y="23" key="#Auto_Import/0.23.1440.877@0.23.1440.877" timestamp="1607342630125" />
     <state x="558" y="323" key="#Customize_Threads_View" timestamp="1602040327881">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -320,14 +329,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="531" y="189" key="#Menus_and_Toolbars/0.23.1440.877@0.23.1440.877" timestamp="1605136709277" />
-    <state x="208" y="43" key="#Project_Structure" timestamp="1605137941984">
+    <state x="208" y="43" key="#Project_Structure" timestamp="1607301666084">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="208" y="43" key="#Project_Structure/0.23.1440.877@0.23.1440.877" timestamp="1605137941984" />
-    <state x="184" y="32" width="1071" height="868" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605145511973">
+    <state x="208" y="43" key="#Project_Structure/0.23.1440.877@0.23.1440.877" timestamp="1607301666084" />
+    <state x="184" y="23" width="1071" height="877" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607340845679">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="184" y="32" width="1071" height="868" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1605145511973" />
+    <state x="184" y="23" width="1071" height="877" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1607340845679" />
     <state x="507" y="209" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1602589374114">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -336,10 +345,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="533" y="175" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1602601938910" />
-    <state x="457" y="282" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1605145485837">
+    <state x="457" y="282" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1607300905986">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="457" y="282" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1605145485837" />
+    <state x="457" y="282" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1607300905986" />
     <state x="334" y="157" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1602588756965">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -356,22 +365,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="273" y="223" key="#org.jetbrains.debugger.memory.view.InstancesWindow/0.23.1440.877@0.23.1440.877" timestamp="1602086119460" />
-    <state width="1398" height="221" key="GridCell.Tab.0.bottom" timestamp="1605146643511">
+    <state width="1398" height="220" key="GridCell.Tab.0.bottom" timestamp="1607346330092">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="221" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1605146643511" />
-    <state width="1398" height="221" key="GridCell.Tab.0.center" timestamp="1605146643507">
+    <state width="1398" height="220" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1607346330092" />
+    <state width="1398" height="220" key="GridCell.Tab.0.center" timestamp="1607346330091">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="221" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1605146643507" />
-    <state width="1398" height="221" key="GridCell.Tab.0.left" timestamp="1605146643507">
+    <state width="1398" height="220" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1607346330091" />
+    <state width="1398" height="220" key="GridCell.Tab.0.left" timestamp="1607346330091">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="221" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1605146643507" />
-    <state width="1398" height="221" key="GridCell.Tab.0.right" timestamp="1605146643511">
+    <state width="1398" height="220" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1607346330091" />
+    <state width="1398" height="220" key="GridCell.Tab.0.right" timestamp="1607346330092">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="221" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1605146643511" />
+    <state width="1398" height="220" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1607346330092" />
     <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1602125663285">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -392,14 +401,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="430" y="171" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1605140311877" />
-    <state x="5" y="23" key="SettingsEditor" timestamp="1605140379782">
+    <state x="5" y="23" key="SettingsEditor" timestamp="1607342250299">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="5" y="23" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1605140379782" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1602640514225">
+    <state x="5" y="23" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1607342250299" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1605146742095">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1602640514225" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1605146742095" />
     <state width="720" height="438" key="XDebugger.FullValuePopup" timestamp="1601953128019">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
